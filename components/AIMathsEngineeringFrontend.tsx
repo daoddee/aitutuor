@@ -1,3 +1,4 @@
+"use client";
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { Upload, Send, Image as ImageIcon, Loader2, FileText, Download, Settings, Shield, CheckCircle2, AlertTriangle, Wifi, Play } from "lucide-react";
