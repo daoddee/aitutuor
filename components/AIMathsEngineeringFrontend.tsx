@@ -59,7 +59,7 @@ function resolveWebhookUrlClientSafe(): string {
   }
 }
 
-export default function AIMathsEngineeringFrontend() {
+export function AIMathsEngineeringFrontend() {
   const [text, setText] = useState("");
   const [imageFile, setImageFile] = useState<File | null>(null);
   const [dragOver, setDragOver] = useState(false);
@@ -214,7 +214,7 @@ export default function AIMathsEngineeringFrontend() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white px-4 py-10">
+    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white px-4 py-10" data-app="ai-maths-engineering-frontend">
       <div className="max-w-6xl mx-auto">
         <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="mb-8">
           <h1 className="text-3xl font-bold tracking-tight">Maths & Engineering AI Agent</h1>
@@ -453,3 +453,6 @@ export default function AIMathsEngineeringFrontend() {
     </div>
   );
 }
+
+// Also export default for compatibility with both named and default imports.
+export default AIMathsEngineeringFrontend;
